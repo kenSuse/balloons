@@ -1,10 +1,10 @@
 .composition
     position: relative
     &__photo
+        position: absolute
         width: 55%
         box-shadow: $box-shadow
         border-radius: .5rem
-        position: absolute
         z-index: 10
         transition: all .3s
         outline-offset: 1rem
@@ -19,7 +19,7 @@
             left: 2.2rem
         &:hover
             outline: .3rem solid $color-brown-light
-            transform: scale(1.2)
+            transform: scale(1.5)
             z-index: 20
     &:hover &__photo:not(:hover)
         transform: scale(.90)

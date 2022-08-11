@@ -97,7 +97,6 @@ body {
   backface-visibility: hidden;
 }
 .title-secondary:hover {
-  cursor: pointer;
   transform: skewY(3deg) skewX(15deg) scale(1);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -121,8 +120,16 @@ body {
   margin-bottom: 1rem;
 }
 
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
 .margin-bottom-40px {
   margin-bottom: 4rem;
+}
+
+.margin-bottom-60px {
+  margin-bottom: 6rem;
 }
 
 .margin-bottom-80px {
@@ -200,10 +207,10 @@ body {
   position: relative;
 }
 .composition__photo {
+  position: absolute;
   width: 55%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
-  position: absolute;
   z-index: 10;
   transition: all 0.3s;
   outline-offset: 1rem;
@@ -222,11 +229,139 @@ body {
 }
 .composition__photo:hover {
   outline: 0.3rem solid #BA8554;
-  transform: scale(1.2);
+  transform: scale(1.5);
   z-index: 20;
 }
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.9);
+}
+
+.adventure-card {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: all 0.2s;
+}
+.adventure-card:hover {
+  transform: translateY(-1.5rem) scale(1.1);
+}
+.adventure-card__icon {
+  display: inline-block;
+  font-size: 6rem;
+  background: linear-gradient(90deg, #BA8554 3.65%, #A14F03 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.tour-card {
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+.tour-card__side {
+  height: 50rem;
+  transition: all 0.7s ease-out;
+  color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.tour-card__side_front {
+  background: #FFFFFF;
+}
+.tour-card__side_back {
+  transform: rotateY(180deg);
+  background: linear-gradient(156.85deg, #C3956A, #A24F03);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 15px 40px rgba(0, 0, 0, 0.15);
+}
+.tour-card:hover .tour-card__side_front {
+  transform: rotateY(-180deg);
+}
+.tour-card:hover .tour-card__side_back {
+  transform: rotateY(0deg);
+}
+.tour-card__img {
+  background-blend-mode: hard-light;
+  height: 21rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+.tour-card__img_1 {
+  background: #BA8554 url(../img/tour-1.jpg) center/cover no-repeat;
+}
+.tour-card__img_2 {
+  background: #BA8554 url(../img/tour-2.jpg) center/cover no-repeat;
+}
+.tour-card__img_3 {
+  background: #BA8554 url(../img/tour-3.jpg) center/cover no-repeat;
+}
+.tour-card__title {
+  position: absolute;
+  top: 17rem;
+  right: 0;
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 3.3rem;
+  text-transform: uppercase;
+  text-align: right;
+}
+.tour-card__span {
+  padding: 1rem 1.9rem;
+  background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+}
+.tour-card__span_1 {
+  padding-bottom: 0.3rem;
+}
+.tour-card__span_2 {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  padding-top: 0.3rem;
+}
+.tour-card__descr ul {
+  list-style: none;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+.tour-card__descr ul li {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.9rem;
+  color: #777777;
+  border-bottom: 1px solid #777777;
+  display: inline-block;
+}
+.tour-card__descr ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.tour-card__backSide-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tour-card__text {
+  margin-bottom: 8rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+.tour-card__text_1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.9rem;
+}
+.tour-card__text_2 {
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 7rem;
 }
 
 .header {
@@ -297,4 +432,19 @@ body {
 
 .section-about {
   padding-top: 8rem;
+  margin-bottom: 15rem;
+}
+
+.section-adventure {
+  padding: 21rem 0;
+  background: linear-gradient(91.4deg, rgba(186, 133, 84, 0.7) 16.34%, rgba(0, 0, 0, 0.7) 98.8%), url(../img/adventure.jpg) center/cover no-repeat;
+  transform: skewY(7deg);
+  margin-bottom: 15rem;
+}
+.section-adventure > * {
+  transform: skewY(-7deg);
+}
+
+.text-align-center {
+  text-align: center;
 }/*# sourceMappingURL=style.min.css.map */
