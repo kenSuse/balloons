@@ -145,7 +145,7 @@ body {
   text-align: center;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -188,6 +188,13 @@ body {
 .btn_animations {
   animation: btnToUp 0.5s ease 0.7s;
   animation-fill-mode: backwards;
+}
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background: #A14F03;
+  color: #FFFFFF;
+}
+.btn_brown::after {
+  background: #A14F03;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -442,6 +449,102 @@ body {
   object-fit: cover;
 }
 
+.book {
+  height: 50rem;
+  background: linear-gradient(106deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 56%, rgba(186, 133, 84, 0.4) 56%, rgba(161, 79, 3, 0.4) 100%), url(../img/tour-form.jpg) center/cover no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidde;
+}
+
+.form {
+  width: 60%;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 1.7rem;
+}
+.form__group:nth-child(4) {
+  margin-bottom: 5rem;
+}
+.form__input {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  color: #000000;
+  padding: 2rem 0rem 2rem 2rem;
+  background: #FFFFFF;
+  border: none;
+  border-bottom: 0.2rem solid transparent;
+  border-radius: 0.5rem;
+  width: 75%;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 0.2rem solid #66D763;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.form__input:focus:invalid {
+  border-bottom: 0.2rem solid #D76363;
+}
+.form__label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  display: block;
+  padding-top: 1rem;
+  padding-left: 1.6rem;
+  transition: all 0.5s;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3.5rem);
+}
+.form__group-radio {
+  width: 45%;
+  display: inline-block;
+}
+.form__input-radio {
+  display: none;
+}
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+.form__button-radio {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #A14F03;
+  display: block;
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+}
+.form__button-radio::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #A14F03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
+}
+.form-h2 {
+  text-align: left;
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -530,4 +633,9 @@ body {
 .section-feedBack {
   padding: 8rem 0rem;
   position: relative;
+}
+
+.section-book {
+  padding: 10rem;
+  background: linear-gradient(90deg, #BA8554, #A14F03);
 }/*# sourceMappingURL=style.min.css.map */
