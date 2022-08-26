@@ -5,6 +5,8 @@
         margin-bottom: 12rem
     @include respond(tab-port)
         margin-bottom: 40rem
+    @include respond(phone)
+        padding: 0 1rem
 
 
 .section-adventure
@@ -16,6 +18,11 @@
         transform: skewY(-7deg)
     @include respond(tab-land)
         padding: 15rem 0
+    @include respond(phone)
+        padding: 12rem 1rem
+
+    @media (min-resolution:192dpi) and (min-width: 670px), (min-width:1340px)
+        background: linear-gradient(90deg, rgba($color-black, 0.7) 0.03%, rgba($color-white, 0.7) 99.94%), url(../img/adventure-x2.jpg) center / cover no-repeat
 
 .section-tour
     margin-bottom: 8.5rem
@@ -27,3 +34,7 @@
 .section-book
     padding: 10rem
     background: linear-gradient(90deg, $color-brown-light, $color-brown-darck)
+    @include respond(tab-port)
+        padding: 4rem
+    @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1140px)
+        background: linear-gradient(90deg, $color-black, $color-white)

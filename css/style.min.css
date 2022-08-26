@@ -43,22 +43,22 @@
 html {
   font-size: 62.5%;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   html {
     font-size: 56.25%;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   html {
     font-size: 50%;
   }
 }
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   html {
     font-size: 30%;
   }
 }
-@media (min-width: 1800px) {
+@media only screen and (min-width: 1800px) {
   html {
     font-size: 75%;
   }
@@ -94,12 +94,12 @@ body {
   animation: leftToRight 1.7s ease;
   backface-visibility: hidden;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .title-first__first {
     font-size: 4rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .title-first__first {
     font-size: 3.6rem;
     letter-spacing: 0.5rem;
@@ -116,13 +116,13 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6.5rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .title-first__second {
     font-size: 3rem;
     margin-bottom: 3.5rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .title-first__second {
     font-size: 3.2rem;
     letter-spacing: 0.2rem;
@@ -143,13 +143,13 @@ body {
   backface-visibility: hidden;
   margin-bottom: 3rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .title-secondary {
     font-size: 2.8rem;
     margin-bottom: 1rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .title-secondary {
     letter-spacing: 0.6rem;
   }
@@ -169,7 +169,7 @@ body {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .title-third {
     font-size: 1.8rem;
   }
@@ -181,7 +181,7 @@ body {
   line-height: 2.2rem;
   letter-spacing: 0.2rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .paragraf {
     font-size: 1.5rem;
   }
@@ -202,16 +202,16 @@ body {
 .margin-bottom-60px {
   margin-bottom: 6rem;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .margin-bottom-60px {
-    margin-bottom: 7rem;
+    margin-bottom: 9rem;
   }
 }
 
 .margin-bottom-80px {
   margin-bottom: 8rem;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .margin-bottom-80px {
     margin-bottom: 5rem;
   }
@@ -236,13 +236,13 @@ body {
   position: relative;
   border: none;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .btn, .btn:link, .btn:visited {
     font-size: 1.6rem;
     padding: 1.2rem 3rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .btn, .btn:link, .btn:visited {
     padding: 2rem 5rem;
   }
@@ -283,7 +283,7 @@ body {
 .btn_brown::after {
   background: #A14F03;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .btn_tab-port {
     width: 100%;
   }
@@ -369,9 +369,9 @@ body {
   -moz-perspective: 150rem;
   position: relative;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px), (hover: none) {
   .tour-card {
-    height: 60rem;
+    height: auto;
   }
 }
 .tour-card__side {
@@ -387,21 +387,40 @@ body {
   border-radius: 0.3rem;
   overflow: hidden;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px), (hover: none) {
   .tour-card__side {
-    height: 60rem;
+    height: auto;
+    position: relative;
   }
 }
 .tour-card__side_front {
   background: #FFFFFF;
+}
+@media only screen and (max-width: 900px), (hover: none) {
+  .tour-card__side_front {
+    padding-bottom: 13rem;
+    margin-bottom: -11rem;
+  }
 }
 .tour-card__side_back {
   transform: rotateY(180deg);
   background: linear-gradient(156.85deg, #C3956A, #A24F03);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 15px 40px rgba(0, 0, 0, 0.15);
 }
+@media only screen and (max-width: 900px), (hover: none) {
+  .tour-card__side_back {
+    transform: rotateY(0deg);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    padding-top: 12rem;
+  }
+}
 .tour-card:hover .tour-card__side_front {
   transform: rotateY(-180deg);
+}
+@media only screen and (max-width: 900px) {
+  .tour-card:hover .tour-card__side_front {
+    transform: rotateY(0deg);
+  }
 }
 .tour-card:hover .tour-card__side_back {
   transform: rotateY(0deg);
@@ -411,7 +430,7 @@ body {
   height: 21rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .tour-card__img {
     height: 30rem;
   }
@@ -435,7 +454,7 @@ body {
   text-transform: uppercase;
   text-align: right;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .tour-card__title {
     top: 26rem;
     font-size: 3.8rem;
@@ -454,7 +473,7 @@ body {
   right: 0;
   padding-top: 0.3rem;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .tour-card__span_2 {
     top: 3.8rem;
   }
@@ -465,7 +484,7 @@ body {
   margin: 0 auto;
   text-align: center;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .tour-card__descr ul {
     width: 55%;
   }
@@ -481,12 +500,12 @@ body {
 .tour-card__descr ul li:not(:last-child) {
   margin-bottom: 2rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .tour-card__descr ul li {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .tour-card__descr ul li {
     font-size: 2rem;
   }
@@ -496,6 +515,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 900px), (hover: none) {
+  .tour-card__backSide-box {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    padding: 1rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
 }
 .tour-card__text {
   margin-bottom: 8rem;
@@ -521,7 +551,7 @@ body {
   padding: 6rem;
   transform: skewX(-18deg);
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .feedBack-card {
     transform: skewX(350deg);
     padding: 3rem;
@@ -530,7 +560,7 @@ body {
 .feedBack-card > * {
   transform: skewX(20deg);
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .feedBack-card > * {
     transform: skewX(-350deg);
     text-align: center;
@@ -547,7 +577,7 @@ body {
   margin-right: 4rem;
   overflow: hidden;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .feedBack-card__img {
     float: none;
     margin: 0 auto;
@@ -590,6 +620,11 @@ body {
   height: 100%;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7));
 }
+@media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px) {
+  .bg-gradient {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.7));
+  }
+}
 
 .bg-video {
   position: absolute;
@@ -608,9 +643,14 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .book {
     background: linear-gradient(106deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 56%, rgba(186, 133, 84, 0.4) 506%, rgba(161, 79, 3, 0.4) 100%), url(../img/tour-form.jpg) center/cover no-repeat;
+  }
+}
+@media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1140px) {
+  .book {
+    background: linear-gradient(106deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 56%, rgba(0, 0, 0, 0.4) 56%, rgba(255, 255, 255, 0.4) 100%), url(../img/tour-form-x2.jpg) center/cover no-repeat;
   }
 }
 
@@ -625,7 +665,7 @@ body {
 .form__group:nth-child(4) {
   margin-bottom: 5rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .form__group:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -633,10 +673,13 @@ body {
     margin-bottom: 0;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .form {
     width: 100%;
     padding: 3rem;
+  }
+  .form__group:nth-child(4) {
+    margin-bottom: 4rem;
   }
 }
 .form__input {
@@ -651,7 +694,7 @@ body {
   border-radius: 0.5rem;
   width: 75%;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .form__input {
     width: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
@@ -685,7 +728,7 @@ body {
 .form__group-radio:not(:last-child) {
   margin-right: 2rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .form__group-radio {
     display: block;
     margin-bottom: 3rem;
@@ -729,7 +772,7 @@ body {
 .form-h2 {
   text-align: left;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .form-h2 {
     text-align: center;
   }
@@ -740,6 +783,11 @@ body {
   height: 95vh;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-img.jpg) center/cover no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+@media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px) {
+  .header {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0.03%, rgba(255, 255, 255, 0.7) 99.94%), url(../img/header-img-x2.jpg) center/cover no-repeat;
+  }
 }
 .header__logo {
   position: absolute;
@@ -779,14 +827,15 @@ body {
 .footer__item:not(:last-child) {
   margin-right: 5rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .footer__item:not(:last-child) {
     margin-right: 1.6rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .footer__item {
-    margin: 0 3rem 3rem 0;
+    margin: 0;
+    padding: 2rem;
   }
 }
 .footer__link:link, .footer__link:visited {
@@ -815,17 +864,17 @@ body {
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .row:not(:last-child) {
     margin-bottom: 4rem;
   }
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .row {
     max-width: 90.1rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .row {
     max-width: 60rem;
   }
@@ -838,7 +887,7 @@ body {
 .col-1-of-3 {
   width: calc((100% - 2 * 6rem) / 3);
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .col-1-of-3 {
     width: calc((100% - 2 * 2rem) / 3);
   }
@@ -851,7 +900,7 @@ body {
 .col-1-of-4 {
   width: calc((100% - 3 * 6rem) / 4);
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .col-1-of-4 {
     width: calc((100% - 3 * 2rem) / 4);
   }
@@ -871,12 +920,12 @@ body {
 [class^=col-]:not(:last-child) {
   margin-right: 6rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   [class^=col-]:not(:last-child) {
     margin-right: 2rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   [class^=col-] {
     width: 100%;
     margin-right: 0 !important;
@@ -955,7 +1004,7 @@ body {
   transform: translateX(1rem);
 }
 .navigation__toggle:checked ~ .navigation__background {
-  transform: scale(80);
+  transform: scale(100);
 }
 .navigation__toggle:checked ~ .navigation__nav {
   width: 100%;
@@ -1005,14 +1054,19 @@ body {
   padding-top: 8rem;
   margin-bottom: 15rem;
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .section-about {
     margin-bottom: 12rem;
   }
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .section-about {
     margin-bottom: 40rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .section-about {
+    padding: 0 1rem;
   }
 }
 
@@ -1025,9 +1079,19 @@ body {
 .section-adventure > * {
   transform: skewY(-7deg);
 }
-@media (max-width: 1240px) {
+@media only screen and (max-width: 1240px) {
   .section-adventure {
     padding: 15rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .section-adventure {
+    padding: 12rem 1rem;
+  }
+}
+@media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px) {
+  .section-adventure {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0.03%, rgba(255, 255, 255, 0.7) 99.94%), url(../img/adventure-x2.jpg) center/cover no-repeat;
   }
 }
 
@@ -1043,4 +1107,14 @@ body {
 .section-book {
   padding: 10rem;
   background: linear-gradient(90deg, #BA8554, #A14F03);
+}
+@media only screen and (max-width: 900px) {
+  .section-book {
+    padding: 4rem;
+  }
+}
+@media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1140px) {
+  .section-book {
+    background: linear-gradient(90deg, #000000, #FFFFFF);
+  }
 }/*# sourceMappingURL=style.min.css.map */
